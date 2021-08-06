@@ -1,0 +1,116 @@
+.road {
+    padding: 50px 0 100px 0;
+    text-align: center;
+    position: relative;
+    .title {
+        font-size: 58px;
+        line-height: 78px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #224a60;
+    }
+    .subtitle {
+        font-size: 22px;
+        line-height: 24px;
+        font-weight: 400;
+        font-style: italic;
+        color: #224a60;
+    }
+    &__wrapper {
+        margin-top: 50px;
+        display: grid;
+        grid-template-columns: repeat(4, 23%);
+        column-gap: 29px;
+        &-block {
+            position: relative;
+            .text1 {
+                margin-top: 23px;
+                font-size: 21px;
+                line-height: 27px;
+                font-weight: 700;
+                letter-spacing: -1px;
+                color: #2c5871;
+                text-transform: uppercase;
+                padding: 0 10px;
+            }
+            .text2 {
+                margin-top: 27px;
+                font-size: 14px;
+                line-height: 24px;
+                font-weight: 400;
+                color: #7b7b7b;
+            }
+            &::after {
+                position: absolute;
+                content: '';
+                background-image: url(../icons/strelka.png);
+                width: 63px;
+                height: 23px;
+                opacity: 0.16;
+                top: 45px;
+                right: -42px;
+            }
+            &:last-child {
+                &::after {
+                    content: unset;
+                }
+            }
+        }
+    }
+    button {
+        position: absolute;
+        bottom: -40px;
+        padding: 30px 30px 20px 30px;
+        border-bottom-left-radius: 50%;
+        border-bottom-right-radius: 50%;
+        background-color: white;
+        right: 50%;
+        transform: translateX(50%);
+        &:before,
+        &:after {
+            content: "";
+            position: absolute;
+            height: 10px;
+            width: 20px;
+            top: 25px;
+            transform: rotate(180deg);
+        }
+        &:after {
+            left: -20px;
+            border-radius: 0 0 0 10px;
+            -moz-border-radius: 0 0 0 10px;
+            -webkit-border-radius: 0 0 0 10px;
+            -webkit-box-shadow: -10px 0 0 0 #fff;
+            box-shadow: -10px 0 0 0 #fff;
+        }
+        &:before {
+            right: -20px;
+            border-radius: 0 0 10px 0;
+            -moz-border-radius: 0 0 10px 0;
+            -webkit-border-radius: 0 0 10px 0;
+            -webkit-box-shadow: 10px 0 0 0 #fff;
+            box-shadow: 10px 0 0 0 #fff;
+        }
+        img {
+            transition: transform .3s;
+        }
+        &:hover {
+            @media (min-width: 1201px) {
+                img {
+                    transition: transform .3s;
+                    transform: translateY(5px);
+                }
+            }
+        }
+    }
+    &__more {
+        display: none;
+        padding-top: 50px;
+        font-size: 22px;
+        line-height: 24px;
+        max-height: 0;
+        will-change: max-height;
+        transition: all 0.3s ease-out;
+        box-sizing: content-box;
+    }
+}

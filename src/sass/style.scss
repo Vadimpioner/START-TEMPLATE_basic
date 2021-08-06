@@ -8,7 +8,17 @@
 
 /* -----blocks----- */
 
+@import 'blocks/header';
+@import 'blocks/send';
+@import 'blocks/road';
+@import 'blocks/offer';
+@import 'blocks/footer';
 
 /* -----media----- */
 
 @import 'media/container';
+@import 'media/header';
+@import 'media/send';
+@import 'media/road';
+@import 'media/offer';
+@import 'media/footer';
